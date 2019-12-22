@@ -1,0 +1,56 @@
+<div class="row no-gutters">
+    <!--             <div class="col-md-1">
+<h4>{{ i }}</h4>
+</div> -->
+    <div class="col-xl-1 col-md-2 col-sm-2 col-3">
+
+        <a *ngIf="book.previewLink;else img" target="_blank" href="{{ book.previewLink }}">
+            <app-thumb-img [src]="book.smallThumbnailUrl" [alt]="'thumbnail'"></app-thumb-img>
+        </a>
+
+        <ng-template #img>
+            <app-thumb-img [src]="book.smallThumbnailUrl" [alt]="'thumbnail'"></app-thumb-img>
+        </ng-template>
+
+    </div>
+    <div class="col-xl-10 col-md-9 col-sm-9 col-8">
+        <div class="card-body">
+
+            <!--  <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+              Popover on top
+          </button> -->
+
+            <a *ngIf="book.previewLink" target="_blank" href="{{ book.previewLink }}">
+                <h5 class="card-title">{{ book.title }}</h5>
+            </a>
+            <h5 *ngIfElse class="card-title">{{ book.title }}</h5>
+            <h6 *ngIf="book.subtitle" class="subtitle font-italic font-weight-normal prefix-line">
+                {{ book.subtitle | slice:0:MAX_SUBTITLE_LEN }}
+                <span class="more-placeholder" *ngIf="book.subtitle.length > MAX_SUBTITLE_LEN">...</span>
+            </h6>
+            <!--                         
+          <p class="card-text mb-0" *ngIf="book.description">
+              {{ book.description | slice:0:MAX_DESC_LEN }}
+              <span class="more-placeholder" *ngIf="book.description.length > MAX_DESC_LEN">...</span>
+          </p> 
+          -->
+            <p class="card-text">
+                <a *ngIf="book.previewLink" target="_blank" href="{{ book.previewLink }}">Preview</a>
+                <small class="text-muted prefix-line">
+                  {{ getInfos(book) }}
+              </small>
+            </p>
+        </div>
+    </div>
+    <div class="col-xl-1 col-md-1 col-sm-1 col-1">
+        <button *ngIf="!favorite; else removeFavorite" mat-icon-button (click)="openDialog();">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <ng-template #removeFavorite>
+            <button mat-icon-button (click)="remove();">
+                <mat-icon>close</mat-icon>
+            </button>
+        </ng-template>
+
+    </div>
+</div>

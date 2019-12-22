@@ -1,0 +1,11 @@
+<mat-toolbar>
+
+    <span id="siteTitle" routerLink="/" routerLinkActive="active">{{user ? 'Welcome ' + user : 'Google Books Search'}}</span>
+    <span class="spacer">{{user ? 'Google Books Search': ''}}</span>
+    <!-- <ng-template *ngIf="localStorageService.get('currentUser')"> -->
+    <button mat-icon-button routerLink="/search" routerLinkActive="active"><mat-icon class="icon" aria-hidden="false" aria-label="search icon">search</mat-icon></button>
+    <button id="favoriteBtn" mat-icon-button routerLink="/favorites" routerLinkActive="active"><mat-icon class="icon pull-right" aria-hidden="false" aria-label="favorite icon">favorite</mat-icon></button>
+    <!-- </ng-template> -->
+</mat-toolbar>
+
+<router-outlet></router-outlet>

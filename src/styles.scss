@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+/*
+@import 'node_modules/bootstrap/scss/_functions.scss';
+@import 'node_modules/bootstrap/scss/_variables.scss';
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+*/
+
+// @import "node_modules/rfs/scss";
+// $enable-responsive-font-sizes: true;
+html,
+body {
+    background-color: #00000003;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4142;
+}
+
+.prefix-line:before {
+    content: "\2014\00A0";
+    margin-left: 8px;
+}
+
+.more-placeholder {
+    margin-left: 3px;
+}
+
+button {
+    outline: 0 !important;
+}

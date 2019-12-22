@@ -1,0 +1,25 @@
+<mat-toolbar>
+    <span>Book Information</span>
+    <span class="spacer"></span>
+    <button mat-icon-button title="Add To Favorites" (click)="addToFavorites();" [mat-dialog-close]="data" cdkFocusInitial><mat-icon>favorite_border</mat-icon></button>
+    <button mat-icon-button title="Close Dialog" (click)="onNoClick()"><mat-icon>close</mat-icon></button>
+</mat-toolbar>
+
+<div mat-dialog-content>
+    <ul>
+        <li *ngIf="data.book.title || data.book.smallThumbnailUrl">
+            <img src="{{data.book.smallThumbnailUrl}}" />
+            <p><b>{{data.book.title}}</b></p>
+        </li>
+        <li *ngIf="data.book.subtitle"><b>Subtitle: </b> {{data.book.subtitle}}</li>
+        <li *ngIf="data.book.authors"><b>Authors: </b>{{data.book.authors}}</li>
+        <li *ngIf="data.book.description"><b>Description: </b>{{data.book.description}}</li>
+        <li *ngIf="data.book.publishedDate"><b>Published Date: </b>{{data.book.publishedDate}}</li>
+        <li *ngIf="data.book.pageCount"><b>Page Count: </b>{{data.book.pageCount}}</li>
+        <li *ngIf="data.book.averageRating"><b>Average Rating: </b>{{data.book.averageRating}}</li>
+        <li *ngIf="data.book.categories"><b>Categories: </b>{{data.book.categories}}</li>
+        <li *ngIf="data.book.previewLink"><a href="{{data.book.previewLink}}" target="_blank">Preview</a></li>
+        <li *ngIf="data.book.infoLink"><a href="{{data.book.infoLink}}" target="_blank">More Info</a></li>
+
+    </ul>
+</div>

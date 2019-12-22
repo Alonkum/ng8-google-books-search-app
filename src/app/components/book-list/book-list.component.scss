@@ -1,0 +1,59 @@
+:host {
+    display: block;
+}
+
+.card {
+    height: 120px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    margin-right: 15px;
+    border-top: 1px solid #eee;
+    border-radius: 0px;
+    padding-top: 15px;
+    .card-title {
+        margin-bottom: 0.1rem;
+    }
+    .card-body {
+        padding: 0px;
+    }
+}
+
+.scroll-wrapper {
+    height: 54vh;
+}
+
+.chunk-loader-wrapper {
+    height: 50px;
+}
+
+cdk-virtual-scroll-viewport {
+    height: 90%;
+    .cdk-virtual-scroll-content-wrapper {
+        padding: 15px !important;
+    }
+    &::-webkit-scrollbar {
+        width: 0.5em;
+    }
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        background-color: var(--orange);
+    }
+}
+
+.book-list {
+    max-height: 57vh;
+    overflow: auto;
+    overflow-x: hidden;
+    @media (max-width: 991px) {
+        max-height: 50vh;
+    }
+}
+
+.container {
+    max-width: 95vw;
+}

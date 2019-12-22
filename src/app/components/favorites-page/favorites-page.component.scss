@@ -1,0 +1,24 @@
+.noFavoritesContainer {
+    text-align: center;
+    h1 {
+        font-size: 2rem;
+        margin: 8rem 0;
+    }
+}
+
+.container {
+    .card-body {
+        padding: 1.25rem;
+    }
+}
+
+*/deep/ app-book {
+    .no-gutters {
+        background: white;
+        border: 1px solid #2b30353d;
+        border-radius: .25rem;
+        box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.3);
+        margin-bottom: 1rem;
+        padding: 1.25rem;
+    }
+}

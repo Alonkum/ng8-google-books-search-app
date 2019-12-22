@@ -1,0 +1,15 @@
+<div class="container mt-3" *ngIf="favoriteBooks?.length > 0; else noFavorites">
+    <div class="card-body" fxFill fxLayout="row" fxLayoutAlign="space-between">
+        <div class="book-list" fxLayout="row wrap">
+            <ng-container class="card  animated fadeIn" *ngFor="let book of favoriteBooks; let index;">
+                <app-book [favorite]="true" [book]="book" (removeTrigger)="removeFromFavorites(index);"></app-book>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<ng-template #noFavorites>
+    <div class="noFavoritesContainer">
+        <h1>No Favorites</h1>
+    </div>
+</ng-template>

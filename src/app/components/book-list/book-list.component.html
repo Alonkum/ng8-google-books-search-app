@@ -1,0 +1,11 @@
+<div class="container">
+    <div fxFill fxLayout="column" fxLayoutAlign="space-between">
+        <div class="book-list" fxLayout="row wrap">
+            <ng-container class="card mb-3 animated fadeIn" *ngFor="let book of books;">
+                <app-book [book]="book"></app-book>
+            </ng-container>
+        </div>
+        <mat-paginator [length]="totalBooks" [pageSize]="20" [pageIndex]="page" (page)="pageChanged.emit($event)">
+        </mat-paginator>
+    </div>
+</div>

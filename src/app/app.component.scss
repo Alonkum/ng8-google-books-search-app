@@ -1,0 +1,30 @@
+// h2 {
+//     text-align: center;
+//     padding: 1rem;
+//     background: #8888be;
+// }
+.mat-toolbar {
+    background: transparent;
+}
+
+.spacer {
+    flex: 1 1 auto;
+    text-align: center;
+    padding-right: 10rem;
+    @media (max-width: 991px) {
+        font-size: 0px;
+    }
+}
+
+.mat-icon {
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+#siteTitle {
+    cursor: pointer;
+}
+
+#favoriteBtn {
+    color: #bb0808cc;
+}

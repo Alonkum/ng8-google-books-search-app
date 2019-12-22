@@ -1,0 +1,12 @@
+<section>
+    <div class="container card mt-4 col-xl-4 col-lg-6 col-md-8 col-sm-10">
+        <h2>Login</h2>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Enter your email" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <br>
+        <button mat-button class="btn bg-dark text-white  btn-block" [disabled]="email.invalid" (click)="!email.invalid ? login() : null;">Submit</button>
+    </div>
+</section>
